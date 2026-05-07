@@ -1,5 +1,4 @@
 * {
-}
 
 .member-card:hover {
   transform: translateY(-8px);
@@ -76,4 +75,5 @@ footer {
 .show {
   opacity: 1;
   transform: translateY(0);
+}
 }
