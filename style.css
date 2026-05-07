@@ -195,6 +195,15 @@ footer {
   .member-card img {
     height: 300px;
   }
+  .fecha-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .flyer-img {
+    width: 100%;
+    max-width: 400px;
+  }
 }
 
 .hidden {
