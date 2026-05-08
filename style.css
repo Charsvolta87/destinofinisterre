@@ -39,11 +39,14 @@ body::before {
 
 .hero {
   min-height: 100vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   text-align: center;
+
   padding: 20px;
   padding-top: 180px;
 }
