@@ -470,13 +470,47 @@ button:focus {
   width: 100%;
 }
 
+.navbar a span {
+  position: relative;
+  transition: .3s;
+}
+
+/* hover */
+
+.navbar a:hover span {
+  color: #ff3a3a;
+}
+
+/* línea */
+
+.navbar a span::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 0%;
+  height: 1px;
+
+  background: #7a0000;
+
+  transition: .3s;
+}
+
+/* hover */
+
+.navbar a:hover span::after {
+  width: 100%;
+}
+
 /* active SOLO JS */
 
-.navbar a.active {
+.navbar a.active span {
   color: #ff3a3a;
   text-shadow: 0 0 12px rgba(255,0,0,.4);
 }
 
-.navbar a.active::after {
+.navbar a.active span::after {
   width: 100%;
 }
