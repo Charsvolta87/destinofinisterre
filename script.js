@@ -20,43 +20,48 @@ hiddenElements.forEach(el => {
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".navbar a");
 
-window.addEventListener("scroll", () => {
+function setActiveLink() {
 
-  let current = "";
+  let currentSection = "";
 
   sections.forEach(section => {
 
-    const sectionTop = section.offsetTop - 180;
-    const sectionHeight = section.clientHeight;
+    const sectionTop = section.offsetTop - 250;
+    const sectionHeight = section.offsetHeight;
 
     if (
-      scrollY >= sectionTop &&
-      scrollY < sectionTop + sectionHeight
+      window.scrollY >= sectionTop &&
+      window.scrollY < sectionTop + sectionHeight
     ) {
-      current = section.getAttribute("id");
+      currentSection = section.getAttribute("id");
     }
 
   });
- 
- 
-  // 🔥 detectar final de página
 
-if (
-  window.innerHeight + window.scrollY
-  >= document.body.offsetHeight - 120
-) {
-  current = "redes";
-}
+  // 🔥 detectar final de página
+  if (
+    window.innerHeight + window.scrollY
+    >= document.body.offsetHeight - 120
+  ) {
+    currentSection = "redes";
+  }
 
   navLinks.forEach(link => {
 
     link.classList.remove("active");
 
-    if (link.getAttribute("href") === `#${current}`) {
+    const href = link.getAttribute("href");
+
+    if (href === `#${currentSection}`) {
       link.classList.add("active");
     }
 
   });
 
-});
+}
 
+window.addEventListener("scroll", setActiveLink);
+
+window.addEventListener("load", setActiveLink);
+
+setActiveLink();
