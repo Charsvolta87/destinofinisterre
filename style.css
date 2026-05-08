@@ -80,6 +80,10 @@ h1 {
   transform: scale(1.05);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* HEADER */
 
 .main-header {
