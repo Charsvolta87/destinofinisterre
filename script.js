@@ -30,15 +30,22 @@ function setActiveLink() {
 
     const rect = section.getBoundingClientRect();
 
-    // 🔥 detecta si la sección está visible
     if (
-      rect.top <= window.innerHeight * 0.35 &&
-      rect.bottom >= window.innerHeight * 0.35
+      rect.top <= window.innerHeight * 0.4 &&
+      rect.bottom >= window.innerHeight * 0.4
     ) {
       currentSection = section.id;
     }
 
   });
+
+  // 🔥 detectar final de página
+  if (
+    window.innerHeight + window.scrollY
+    >= document.body.offsetHeight - 120
+  ) {
+    currentSection = "redes";
+  }
 
   navLinks.forEach(link => {
 
@@ -64,11 +71,3 @@ window.onbeforeunload = function () {
 window.addEventListener("load", () => {
   window.scrollTo(0, 0);
 });
-// 🔥 detectar final de página
-
-if (
-  window.innerHeight + window.scrollY
-  >= document.body.offsetHeight - 250
-) {
-  current = "redes";
-}
