@@ -65,9 +65,3 @@ window.addEventListener("load", setActiveLink);
 
 setActiveLink();
 
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
-window.addEventListener("load", () => {
-  window.scrollTo(0, 0);
-});
