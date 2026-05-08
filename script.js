@@ -37,6 +37,16 @@ window.addEventListener("scroll", () => {
     }
 
   });
+ 
+ 
+  // 🔥 detectar final de página
+
+if (
+  window.innerHeight + window.scrollY
+  >= document.body.offsetHeight - 120
+) {
+  current = "redes";
+}
 
   navLinks.forEach(link => {
 
