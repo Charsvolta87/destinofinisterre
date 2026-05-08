@@ -283,3 +283,21 @@ footer {
   border: none;
   object-fit: cover;
 }
+
+
+/* SEPARADORES */
+.video-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.video-info h3 {
+  font-size: 1.1rem;
+  color: #f1f1f1;
+}
+
+.video-info p {
+  color: #8d8d8d;
+  font-size: .95rem;
+}
