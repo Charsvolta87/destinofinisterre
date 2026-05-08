@@ -45,6 +45,7 @@ body::before {
   align-items: center;
   text-align: center;
   padding: 20px;
+  padding-top: 180px;
 }
 
 .logo {
