@@ -159,6 +159,7 @@ h1 {
 }
 
 
+
 /* SECCIONES */
 
 .section {
@@ -266,6 +267,17 @@ footer {
   .hero {
     padding-top: 100px;
   }
+
+  .header-container {
+  flex-direction: column;
+  gap: 15px;
+}
+
+.navbar {
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
   .section {
     padding: 80px 20px;
