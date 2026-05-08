@@ -1,3 +1,5 @@
+history.scrollRestoration = "manual";
+
 const observer = new IntersectionObserver(entries => {
 
   entries.forEach(entry => {
@@ -55,3 +57,7 @@ window.addEventListener("scroll", setActiveLink);
 window.addEventListener("load", setActiveLink);
 
 setActiveLink();
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
