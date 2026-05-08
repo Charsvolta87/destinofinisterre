@@ -308,21 +308,6 @@ footer {
     max-width: 400px;
   }
 
-  .navbar a {
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-}
-
-.navbar a:focus,
-.navbar a:active {
-  color: inherit;
-  outline: none;
-}
-
-
-
-
-
 }
 
 .hidden {
@@ -431,16 +416,67 @@ button:focus {
 }
 
 /* ILUMINACION DE SECCIONES EN EL MENU */
-.navbar a.active {
-  color: #ff3a3a;
+.navbar a {
+  color: #f1f1f1;
+  text-decoration: none;
+
+  font-size: .95rem;
+  letter-spacing: 1px;
+
+  position: relative;
+
+  transition: .3s;
+
+  user-select: none;
+
+  -webkit-tap-highlight-color: transparent;
 }
 
-.navbar a.active::after {
-  width: 100%;
-}
+/* 🔥 eliminar TODOS los estados del navegador */
 
 .navbar a:focus,
 .navbar a:active,
 .navbar a:visited {
   color: #f1f1f1;
+  outline: none;
+}
+
+/* hover real */
+
+.navbar a:hover {
+  color: #ff3a3a;
+}
+
+/* línea */
+
+.navbar a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 0%;
+  height: 1px;
+
+  background: #7a0000;
+
+  transition: .3s;
+}
+
+/* hover */
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* active SOLO JS */
+
+.navbar a.active {
+  color: #ff3a3a;
+  text-shadow: 0 0 12px rgba(255,0,0,.4);
+}
+
+.navbar a.active::after {
+  width: 100%;
 }
