@@ -61,7 +61,9 @@ setActiveLink();
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
-
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+});
 // 🔥 detectar final de página
 
 if (
