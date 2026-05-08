@@ -61,3 +61,12 @@ setActiveLink();
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
+
+// 🔥 detectar final de página
+
+if (
+  window.innerHeight + window.scrollY
+  >= document.body.offsetHeight - 120
+) {
+  current = "redes";
+}
