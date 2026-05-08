@@ -229,3 +229,57 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+
+
+/* VIDEOS */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.video-card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #0b0b0b;
+  border: 1px solid rgba(255,255,255,.08);
+  transition: .4s;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255,0,0,.35);
+}
+
+/* HORIZONTAL */
+.video-card.horizontal {
+  aspect-ratio: 16 / 9;
+}
+
+/* VERTICAL */
+.video-card.vertical {
+  aspect-ratio: 9 / 16;
+}
+
+/* CUADRADO */
+.video-card.square {
+  aspect-ratio: 1 / 1;
+}
+
+/* CLÁSICO */
+.video-card.classic {
+  aspect-ratio: 4 / 3;
+}
+
+.video-card iframe,
+.video-card video {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+}
