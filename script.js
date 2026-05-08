@@ -66,7 +66,7 @@ window.onbeforeunload = function () {
 
 if (
   window.innerHeight + window.scrollY
-  >= document.body.offsetHeight - 120
+  >= document.body.offsetHeight - 200
 ) {
   current = "redes";
 }
