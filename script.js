@@ -26,33 +26,23 @@ function setActiveLink() {
 
   sections.forEach(section => {
 
-    const sectionTop = section.offsetTop - 250;
-    const sectionHeight = section.offsetHeight;
+    const rect = section.getBoundingClientRect();
 
+    // 🔥 detecta si la sección está visible
     if (
-      window.scrollY >= sectionTop &&
-      window.scrollY < sectionTop + sectionHeight
+      rect.top <= window.innerHeight * 0.35 &&
+      rect.bottom >= window.innerHeight * 0.35
     ) {
-      currentSection = section.getAttribute("id");
+      currentSection = section.id;
     }
 
   });
-
-  // 🔥 detectar final de página
-  if (
-    window.innerHeight + window.scrollY
-    >= document.body.offsetHeight - 120
-  ) {
-    currentSection = "redes";
-  }
 
   navLinks.forEach(link => {
 
     link.classList.remove("active");
 
-    const href = link.getAttribute("href");
-
-    if (href === `#${currentSection}`) {
+    if (link.getAttribute("href") === `#${currentSection}`) {
       link.classList.add("active");
     }
 

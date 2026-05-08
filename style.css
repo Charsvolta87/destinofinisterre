@@ -542,3 +542,11 @@ button:focus {
   }
 
 }
+
+.navbar a.active:hover span {
+  color: #ff3a3a;
+}
+
+.navbar a.active:hover span::after {
+  width: 100%;
+}
