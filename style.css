@@ -514,3 +514,31 @@ button:focus {
 .navbar a.active span::after {
   width: 100%;
 }
+
+@media (hover: none) {
+
+  .navbar a:hover {
+    color: inherit;
+  }
+
+  .navbar a:hover span {
+    color: inherit;
+    text-shadow: none;
+  }
+
+  .navbar a:hover::after,
+  .navbar a:hover span::after {
+    width: 0%;
+  }
+
+  .btn:hover,
+  .member-card:hover,
+  .video-card:hover,
+  .socials a:hover,
+  .flyer-img:hover {
+    transform: none;
+    background: inherit;
+    border-color: inherit;
+  }
+
+}
