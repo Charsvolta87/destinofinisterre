@@ -402,3 +402,23 @@ footer {
   color: #8d8d8d;
   font-size: .95rem;
 }
+
+/* QUITAR DESTELLO DE SELECCION */
+a,
+button,
+img {
+  -webkit-tap-highlight-color: transparent;
+}
+a:focus,
+button:focus {
+  outline: none;
+}
+
+/* ILUMINACION DE SECCIONES EN EL MENU */
+.navbar a.active {
+  color: #ff3a3a;
+}
+
+.navbar a.active::after {
+  width: 100%;
+}
