@@ -422,3 +422,9 @@ button:focus {
 .navbar a.active::after {
   width: 100%;
 }
+
+.navbar a:focus,
+.navbar a:active,
+.navbar a:visited {
+  color: #f1f1f1;
+}
