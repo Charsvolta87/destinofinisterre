@@ -307,6 +307,22 @@ footer {
     width: 100%;
     max-width: 400px;
   }
+
+  .navbar a {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.navbar a:focus,
+.navbar a:active {
+  color: inherit;
+  outline: none;
+}
+
+
+
+
+
 }
 
 .hidden {
