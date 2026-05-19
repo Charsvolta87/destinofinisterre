@@ -72,30 +72,48 @@
 
   <script>
 
-    function generarJS(){
+function generarJS(){
 
-      const nombre = document.getElementById("nombre").value;
+  const nombre = document.getElementById("nombre").value;
 
-      const fecha = document.getElementById("fecha").value;
+  const fecha = document.getElementById("fecha").value;
 
-      const carpeta = document.getElementById("carpeta").value;
+  const carpeta = document.getElementById("carpeta").value;
 
-      const fotos = document.getElementById("fotos").files;
+  /* =========================
+     FOTOS
+  ========================= */
 
-const videos = document
-  .getElementById("videos")
-  .value
-  .split("\n")
-  .map(v => v.trim())
-  .filter(v => v !== "");
+  const fotosFiles = document.getElementById("fotos").files;
 
- const videosFinal = Array.from(videos).map(file => {
+  const fotosFinal = Array.from(fotosFiles).map(file => {
 
-  return `"imagenes/${carpeta}/${file.name}"`;
+    return `"imagenes/${carpeta}/${file.name}"`;
 
-});
+  });
 
-      const js = `
+  /* =========================
+     VIDEOS YOUTUBE
+  ========================= */
+
+  const videos = document
+    .getElementById("videos")
+    .value
+    .split("\n")
+    .map(v => v.trim())
+    .filter(v => v !== "");
+
+  const videosFinal = videos.map(video => {
+
+    return `"${video}"`;
+
+  });
+
+  /* =========================
+     GENERAR JS
+  ========================= */
+
+  const js = `
 
 {
   nombre: "${nombre}",
@@ -113,22 +131,27 @@ const videos = document
 
 `;
 
-      document.getElementById("resultado").textContent = js;
-      const blob = new Blob([js], {
-  type: "text/javascript"
-});
+  document.getElementById("resultado").textContent = js;
 
-const link = document.createElement("a");
+  /* =========================
+     DESCARGAR
+  ========================= */
 
-link.href = URL.createObjectURL(blob);
+  const blob = new Blob([js], {
+    type: "text/javascript"
+  });
 
-link.download = `${carpeta}.js`;
+  const link = document.createElement("a");
 
-link.click();
+  link.href = URL.createObjectURL(blob);
 
-    }
+  link.download = `${carpeta}.js`;
 
-  </script>
+  link.click();
+
+}
+
+</script>
 
 </body>
 </html>
