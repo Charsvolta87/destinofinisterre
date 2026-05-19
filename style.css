@@ -201,7 +201,7 @@ html {
   border: 1px solid rgba(255,255,255,.08);
   padding: 30px;
   border-radius: 12px;
-  backdrop-filter: blur(6px);
+  
 }
 
 .fecha-card {
@@ -667,7 +667,7 @@ button:focus {
   border-radius: 14px;
   background-color: #05050513;
   border: 1px solid rgba(255,255,255,.06);
-  backdrop-filter: blur(6px);
+  
   transition:
     transform .3s ease,
     border-color .3s ease;
