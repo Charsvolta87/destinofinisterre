@@ -973,7 +973,7 @@ button:focus {
   width: 520px;
   height: 760px;
   left: -120px;
-
+}
 .bg-ariel{
   background-image:
     url("imagenes/backgrounds/ariel.png");
@@ -1026,5 +1026,4 @@ button:focus {
     opacity: 0.08;
   }
 
-}
 }
