@@ -71,25 +71,21 @@
 
       const carpeta = document.getElementById("carpeta").value;
 
-      const fotos = document
-        .getElementById("fotos")
-        .value
-        .split("\n")
-        .filter(Boolean);
+      const fotos = document.getElementById("fotos").files;
 
-      const videos = document
-        .getElementById("videos")
-        .value
-        .split("\n")
-        .filter(Boolean);
+const videos = document.getElementById("videos").files;
 
-      const fotosFinal = fotos.map(f =>
-        `"imagenes/${carpeta}/${f}"`
-      );
+    const fotosFinal = Array.from(fotos).map(file => {
 
-      const videosFinal = videos.map(v =>
-        `"imagenes/${carpeta}/${v}"`
-      );
+  return `"imagenes/${carpeta}/${file.name}"`;
+
+});
+
+ const videosFinal = Array.from(videos).map(file => {
+
+  return `"imagenes/${carpeta}/${file.name}"`;
+
+});
 
       const js = `
 
@@ -110,6 +106,17 @@
 `;
 
       document.getElementById("resultado").textContent = js;
+      const blob = new Blob([js], {
+  type: "text/javascript"
+});
+
+const link = document.createElement("a");
+
+link.href = URL.createObjectURL(blob);
+
+link.download = `${carpeta}.js`;
+
+link.click();
 
     }
 
