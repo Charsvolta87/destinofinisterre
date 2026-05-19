@@ -59,6 +59,24 @@ const eventos = [
     
   ]
 },
+
+{
+  nombre: "Club Tucumán",
+  fecha: "30/04/2026",
+  carpeta: "Club Tucumán 30 04 2026",
+
+  fotos: [
+    
+  ],
+
+  videos: [
+    "https://www.youtube.com/watch?v=APfUXcfFTfs",
+    "https://www.youtube.com/watch?v=aJG6vlHOmlE",
+    "https://www.youtube.com/watch?v=GDz_G8Zb05U",
+    "https://www.youtube.com/watch?v=XaGCHlmVRXc",
+    "https://www.youtube.com/watch?v=N2g_VNziEKM"
+  ]
+},
   {
   nombre: "La Camencha",
   fecha: "16/05/2026",
