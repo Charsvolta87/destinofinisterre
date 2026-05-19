@@ -883,19 +883,9 @@ button:focus {
 .galeria-call-content {
   max-width: 900px;
   margin: auto;
-
   padding: 80px 40px;
-
   border-radius: 20px;
-
-  background:
-    linear-gradient(
-      rgba(10,10,10,.85),
-      rgba(0,0,0,.92)
-    );
-
   border: 1px solid rgba(255,255,255,.08);
-
   backdrop-filter: blur(8px);
 }
 
