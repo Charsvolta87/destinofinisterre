@@ -903,3 +903,123 @@ button:focus {
   font-size: .85rem;
   color: #888;
 }
+
+
+
+
+/* =========================
+   SECCIONES CON BACKGROUND
+========================= */
+
+.section-bg{
+  position: relative;
+  overflow: hidden;
+}
+
+/* CAPA DEL MÚSICO */
+
+.bg-member{
+
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 500px;
+  height: 700px;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  opacity: 0;
+
+  filter:
+    grayscale(100%)
+    blur(2px);
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  transition:
+    opacity 1.5s ease,
+    transform 1.5s ease;
+}
+
+/* CONTENIDO ENCIMA */
+
+.section-bg > *:not(.bg-member){
+  position: relative;
+  z-index: 2;
+}
+
+/* APARICIÓN */
+
+.section-bg.show-bg .bg-member{
+  opacity: 0.12;
+}
+
+/* =========================
+   POSICIONES
+========================= */
+
+/* IZQUIERDA */
+
+.bg-nico,
+.bg-ariel,
+.bg-pablo{
+  left: -120px;
+}
+
+/* DERECHA */
+
+.bg-daniel,
+.bg-hernan{
+  right: -120px;
+}
+
+/* =========================
+   IMÁGENES
+========================= */
+
+.bg-nico{
+  background-image:
+    url("imagenes/backgrounds/nico.png");
+}
+
+.bg-daniel{
+  background-image:
+    url("imagenes/backgrounds/daniel.png");
+}
+
+.bg-ariel{
+  background-image:
+    url("imagenes/backgrounds/ariel.png");
+}
+
+.bg-hernan{
+  background-image:
+    url("imagenes/backgrounds/hernan.png");
+}
+
+.bg-pablo{
+  background-image:
+    url("imagenes/backgrounds/pablo.png");
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 900px){
+
+  .bg-member{
+
+    width: 320px;
+    height: 500px;
+
+    opacity: 0.08;
+  }
+
+}

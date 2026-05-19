@@ -11,6 +11,33 @@ const observer = new IntersectionObserver(entries => {
   });
 
 });
+/* =========================
+   BACKGROUNDS CINEMÁTICOS
+========================= */
+
+const bgSections = document.querySelectorAll(".section-bg");
+
+const bgObserver = new IntersectionObserver(entries => {
+
+  entries.forEach(entry => {
+
+    if(entry.isIntersecting){
+
+      entry.target.classList.add("show-bg");
+
+    }
+
+  });
+
+},{
+  threshold: 0.3
+});
+
+bgSections.forEach(section => {
+
+  bgObserver.observe(section);
+
+});
 
 const hiddenElements = document.querySelectorAll('.member-card, .card');
 
