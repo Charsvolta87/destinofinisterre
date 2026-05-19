@@ -1,19 +1,17 @@
 const eventos = [
 
   {
-    nombre: "Baco",
-    fecha: "23-05-2026",
-    carpeta: "23-05-2026",
+  nombre: "La Camencha",
+  fecha: "16·05·2026",
+  carpeta: "La Camencha 16 05 2026",
 
-    fotos: [
-      "imagenes/23-05-2026/foto1.jpg",
-      "imagenes/23-05-2026/foto2.jpg",
-      "imagenes/23-05-2026/foto3.jpg"
-    ],
+  fotos: [
+    "imagenes/La Camencha 16 05 2026/C:\fakepath\Destino_Finisterre_La_Camencha_Glew_01.jpg"
+  ],
 
-    videos: [
-      "imagenes/23-05-2026/video1.mp4"
-    ]
-  }
+  videos: [
+    
+  ]
+},
 
 ];
