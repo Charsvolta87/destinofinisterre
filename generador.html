@@ -48,14 +48,15 @@
 
   <input type="text" id="nombre" placeholder="Nombre del evento">
 
-  <input type="text" id="fecha" placeholder="23-05-2026">
+  <input type="text" id="fecha" placeholder="Fecha">
 
-  <input type="text" id="carpeta" placeholder="23-05-2026">
+  <input type="text" id="carpeta" placeholder="Carpeta">
 
-  <textarea id="fotos" placeholder="foto1.jpg&#10;foto2.jpg"></textarea>
+  <label>Fotos</label>
+<input type="file" id="fotos" multiple accept="image/*">
 
-  <textarea id="videos" placeholder="video1.mp4"></textarea>
-
+<label>Videos</label>
+<input type="file" id="videos" multiple accept="video/*">
   <button onclick="generarJS()">GENERAR</button>
 
   <pre id="resultado"></pre>
