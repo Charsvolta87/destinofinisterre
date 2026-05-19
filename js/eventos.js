@@ -77,6 +77,32 @@ const eventos = [
     "https://www.youtube.com/watch?v=N2g_VNziEKM"
   ]
 },
+
+{
+  nombre: "Baco Berazategui",
+  fecha: "02/05/2026",
+  carpeta: "Baco 02/05/2026",
+
+  fotos: [
+    
+  ],
+
+  videos: [
+    "https://www.youtube.com/watch?v=8k8za1xF6g8&list=PLsXDAPb-_S8FbbjL_QfMsh5GCuCh14GER",
+    "https://www.youtube.com/watch?v=xUOg-jJKvEk&list=PLsXDAPb-_S8FbbjL_QfMsh5GCuCh14GER&index=2",
+    "https://www.youtube.com/watch?v=DI1LYBKWnOs&list=PLsXDAPb-_S8FbbjL_QfMsh5GCuCh14GER&index=3",
+    "https://www.youtube.com/watch?v=KiAQKXr5ZZA&list=PLsXDAPb-_S8FbbjL_QfMsh5GCuCh14GER&index=4",
+    "https://www.youtube.com/watch?v=_gDSSZVwSfg&list=PLsXDAPb-_S8FbbjL_QfMsh5GCuCh14GER&index=5",
+    "https://www.youtube.com/watch?v=rnOh6bkYr1c&list=PLsXDAPb-_S8FbbjL_QfMsh5GCuCh14GER&index=6",
+    "https://www.youtube.com/watch?v=wJQnS9OMYEA&list=PLsXDAPb-_S8FbbjL_QfMsh5GCuCh14GER&index=7",
+    "https://www.youtube.com/watch?v=Z-LRy0YHJ_A&list=PLsXDAPb-_S8FbbjL_QfMsh5GCuCh14GER&index=8",
+    "https://www.youtube.com/watch?v=_azJbIarqyc&list=PLsXDAPb-_S8FbbjL_QfMsh5GCuCh14GER&index=9",
+    "https://www.youtube.com/watch?v=5wLmxbwpUxI&list=PLsXDAPb-_S8FbbjL_QfMsh5GCuCh14GER&index=10",
+    "https://www.youtube.com/watch?v=qAgtvP0TMyA&list=PLsXDAPb-_S8FbbjL_QfMsh5GCuCh14GER&index=11",
+    "https://www.youtube.com/watch?v=MlZbSYT_mkE&list=PLsXDAPb-_S8FbbjL_QfMsh5GCuCh14GER&index=12"
+  ]
+},
+
   {
   nombre: "La Camencha",
   fecha: "16/05/2026",
