@@ -38,6 +38,19 @@ function setActiveLink() {
     }
 
   });
+  if(currentSection === "galeria-call"){
+
+  navLinks.forEach(link => {
+
+    if(link.classList.contains("nav-galeria")){
+
+      link.classList.add("active");
+
+    }
+
+  });
+
+}
 
   // 🔥 detectar final de página
   if (
