@@ -1,32 +1,47 @@
-const eventos = [
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {
-    nombre: "La Camencha",
-    fecha: "16-05-2026",
-    carpeta: "16-05-2026",
+  <title>Galería | Destino Finisterre</title>
 
-    fotos: [
-      "imagenes/16-05-2026/foto1.jpg",
-      "imagenes/16-05-2026/foto2.jpg",
-      "imagenes/16-05-2026/foto3.jpg"
-    ],
+  <link rel="stylesheet" href="style.css">
 
-    videos: [
-      "imagenes/16-05-2026/video1.mp4"
-    ]
-  },
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
 
-  {
-    nombre: "Baco",
-    fecha: "23-05-2026",
-    carpeta: "23-05-2026",
+<body>
 
-    fotos: [
-      "imagenes/23-05-2026/foto1.jpg",
-      "imagenes/23-05-2026/foto2.jpg"
-    ],
+  <div class="overlay"></div>
 
-    videos: []
-  }
+  <header class="main-header">
 
-];
+    <div class="header-container">
+
+      <a href="index.html" class="header-logo">
+        <img src="imagenes/logo.png" alt="Destino Finisterre">
+      </a>
+
+      <nav class="navbar">
+        <a href="index.html">Inicio</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+  <section class="section">
+
+    <h2>GALERÍA</h2>
+
+    <div id="eventos-container"></div>
+
+  </section>
+
+  <script src="js/eventos.js"></script>
+  <script src="js/galeria.js"></script>
+
+</body>
+</html>
