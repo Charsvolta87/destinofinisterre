@@ -817,3 +817,13 @@ button:focus {
   height: 100%;
   border: none;
 }
+
+
+.nav-galeria:hover span {
+  color: #ff3a3a;
+  text-shadow: 0 0 12px rgba(255,0,0,.4);
+}
+
+.nav-galeria:hover span::after {
+  width: 100%;
+}
