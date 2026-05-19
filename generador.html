@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Generador Eventos</title>
+
+  <style>
+
+    body{
+      background:#0a0a0a;
+      color:white;
+      font-family:Arial;
+      padding:40px;
+    }
+
+    input, textarea{
+      width:100%;
+      padding:12px;
+      margin-bottom:20px;
+      background:#111;
+      border:1px solid #333;
+      color:white;
+    }
+
+    button{
+      padding:14px 24px;
+      background:#7a0000;
+      border:none;
+      color:white;
+      cursor:pointer;
+    }
+
+    pre{
+      margin-top:30px;
+      background:#111;
+      padding:20px;
+      overflow:auto;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <h1>GENERADOR DE EVENTOS</h1>
+
+  <input type="text" id="nombre" placeholder="Nombre del evento">
+
+  <input type="text" id="fecha" placeholder="23-05-2026">
+
+  <input type="text" id="carpeta" placeholder="23-05-2026">
+
+  <textarea id="fotos" placeholder="foto1.jpg&#10;foto2.jpg"></textarea>
+
+  <textarea id="videos" placeholder="video1.mp4"></textarea>
+
+  <button onclick="generarJS()">GENERAR</button>
+
+  <pre id="resultado"></pre>
+
+  <script>
+
+    function generarJS(){
+
+      const nombre = document.getElementById("nombre").value;
+
+      const fecha = document.getElementById("fecha").value;
+
+      const carpeta = document.getElementById("carpeta").value;
+
+      const fotos = document
+        .getElementById("fotos")
+        .value
+        .split("\n")
+        .filter(Boolean);
+
+      const videos = document
+        .getElementById("videos")
+        .value
+        .split("\n")
+        .filter(Boolean);
+
+      const fotosFinal = fotos.map(f =>
+        `"imagenes/${carpeta}/${f}"`
+      );
+
+      const videosFinal = videos.map(v =>
+        `"imagenes/${carpeta}/${v}"`
+      );
+
+      const js = `
+
+{
+  nombre: "${nombre}",
+  fecha: "${fecha}",
+  carpeta: "${carpeta}",
+
+  fotos: [
+    ${fotosFinal.join(",\n    ")}
+  ],
+
+  videos: [
+    ${videosFinal.join(",\n    ")}
+  ]
+},
+
+`;
+
+      document.getElementById("resultado").textContent = js;
+
+    }
+
+  </script>
+
+</body>
+</html>
