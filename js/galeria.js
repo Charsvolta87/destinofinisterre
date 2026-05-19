@@ -19,15 +19,39 @@ eventos.forEach(evento => {
 
   let videosHTML = "";
 
-  evento.videos.forEach(video => {
+evento.videos.forEach(video => {
 
-    videosHTML += `
-      <video controls class="galeria-video">
-        <source src="${video}" type="video/mp4">
-      </video>
-    `;
+  // extraer ID de youtube
+  let videoId = "";
 
-  });
+  if(video.includes("watch?v=")){
+
+    videoId = video.split("watch?v=")[1];
+
+  } else if(video.includes("youtu.be/")){
+
+    videoId = video.split("youtu.be/")[1];
+
+  }
+
+  // eliminar parámetros extras
+  videoId = videoId.split("&")[0];
+
+  videosHTML += `
+  
+    <div class="youtube-video">
+
+      <iframe
+        src="https://www.youtube.com/embed/${videoId}"
+        title="${evento.nombre}"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+
+  `;
+
+});
 
   section.innerHTML = `
 

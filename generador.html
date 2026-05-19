@@ -62,7 +62,10 @@
 <input type="file" id="fotos" multiple accept="image/*">
 
 <label>Videos</label>
-<input type="file" id="videos" multiple accept="video/*">
+<textarea
+  id="videos"
+  placeholder="Pegá enlaces de YouTube separados por línea">
+</textarea>
   <button onclick="generarJS()">GENERAR</button>
 
   <pre id="resultado"></pre>
@@ -79,13 +82,12 @@
 
       const fotos = document.getElementById("fotos").files;
 
-const videos = document.getElementById("videos").files;
-
-    const fotosFinal = Array.from(fotos).map(file => {
-
-  return `"imagenes/${carpeta}/${file.name}"`;
-
-});
+const videos = document
+  .getElementById("videos")
+  .value
+  .split("\n")
+  .map(v => v.trim())
+  .filter(v => v !== "");
 
  const videosFinal = Array.from(videos).map(file => {
 
