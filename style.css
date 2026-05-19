@@ -641,3 +641,31 @@ button:focus {
   }
 
 }
+
+.pasados-info {
+  flex: 1;
+}
+.card {
+  background: rgba(20,20,20,.9);
+  border: 1px solid rgba(255,255,255,.08);
+  padding: 30px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
+.fecha-card {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.fecha-card h3 {
+  color: #ff3a3a;
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
