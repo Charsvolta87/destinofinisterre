@@ -204,11 +204,7 @@ html {
   backdrop-filter: blur(6px);
 }
 
-.fecha-card {
-  max-width: 200px;
-  margin: auto;
-  text-align: center;
-}
+
 
 .fecha-card h3 {
   color: #ff3a3a;
