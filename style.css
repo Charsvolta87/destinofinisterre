@@ -660,22 +660,14 @@ button:focus {
 }
 
 .archivo-item{
-
   display: flex;
   align-items: center;
-
   gap: 20px;
-
   padding: 16px 20px;
-
   border-radius: 14px;
-
-  background: rgba(15,15,15,.88);
-
+  background-color: #05050513;
   border: 1px solid rgba(255,255,255,.06);
-
   backdrop-filter: blur(6px);
-
   transition:
     transform .3s ease,
     border-color .3s ease;
