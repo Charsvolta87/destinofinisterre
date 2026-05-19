@@ -642,32 +642,85 @@ button:focus {
 
 }
 
-.pasados-info {
-  flex: 1;
-}
-.card {
-  background: rgba(20,20,20,.9);
-  border: 1px solid rgba(255,255,255,.08);
-  padding: 30px;
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-}
+/* =========================
+   ARCHIVO
+========================= */
 
-.fecha-card {
-  max-width: 500px;
+.archivo-lista{
+
+  max-width: 900px;
+
   margin: auto;
-  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
 }
 
-.fecha-card h3 {
+.archivo-item{
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 16px 20px;
+
+  border-radius: 14px;
+
+  background: rgba(15,15,15,.88);
+
+  border: 1px solid rgba(255,255,255,.06);
+
+  backdrop-filter: blur(6px);
+
+  transition:
+    transform .3s ease,
+    border-color .3s ease;
+}
+
+.archivo-item:hover{
+
+  transform: translateX(8px);
+
+  border-color:
+    rgba(255,80,80,.25);
+}
+
+/* FLYER */
+
+.archivo-flyer{
+
+  width: 90px;
+
+  height: 120px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  flex-shrink: 0;
+}
+
+/* INFO */
+
+.archivo-info h3{
+
   color: #ff3a3a;
-  margin-bottom: 10px;
+
+  margin-bottom: 8px;
+
+  font-size: 1rem;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
+.archivo-info p{
+
+  color: #bdbdbd;
+
+  font-size: .95rem;
+
+  line-height: 1.4;
 }
 
 

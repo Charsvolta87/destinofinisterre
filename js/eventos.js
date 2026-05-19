@@ -1,6 +1,7 @@
 const eventos = [
 
-  {
+    //  MAKENA
+{
   nombre: "Makena",
   fecha: "24/01/2026",
   carpeta: "Makena_24_21_2026",
@@ -59,7 +60,7 @@ const eventos = [
     
   ]
 },
-
+    //  CLUB TUCUMAN
 {
   nombre: "Club Tucumán",
   fecha: "30/04/2026",
@@ -77,7 +78,7 @@ const eventos = [
     "https://www.youtube.com/watch?v=N2g_VNziEKM"
   ]
 },
-
+    //  BACO
 {
   nombre: "Baco Berazategui",
   fecha: "02/05/2026",
@@ -102,8 +103,8 @@ const eventos = [
     "https://www.youtube.com/watch?v=MlZbSYT_mkE&list=PLsXDAPb-_S8FbbjL_QfMsh5GCuCh14GER&index=12"
   ]
 },
-
-  {
+    //  CAMENCHA
+{
   nombre: "La Camencha",
   fecha: "16/05/2026",
   carpeta: "La Camencha 16 05 2026",
