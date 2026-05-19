@@ -978,8 +978,8 @@ button:focus {
   background-image:
     url("imagenes/backgrounds/ariel.png");
 
-  width: 350px;
-  height: 420px;
+  width: 450px;
+  height: 520px;
   left: -120px;
 }
 
@@ -987,8 +987,8 @@ button:focus {
   background-image:
     url("imagenes/backgrounds/pablo.png");
 
-  width: 300px;
-  height: 400px;
+  width: 350px;
+  height: 450px;
   left: -120px;
 }
 
