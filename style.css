@@ -966,47 +966,51 @@ button:focus {
 
 /* IZQUIERDA */
 
-.bg-nico,
-.bg-ariel,
-.bg-pablo{
-  left: -120px;
-}
-
-/* DERECHA */
-
-.bg-daniel,
-.bg-hernan{
-  right: -120px;
-}
-
-/* =========================
-   IMÁGENES
-========================= */
-
 .bg-nico{
   background-image:
     url("imagenes/backgrounds/nico.png");
-}
 
-.bg-daniel{
-  background-image:
-    url("imagenes/backgrounds/daniel.png");
-}
+  width: 520px;
+  height: 760px;
+  left: -120px;
 
 .bg-ariel{
   background-image:
     url("imagenes/backgrounds/ariel.png");
-}
 
-.bg-hernan{
-  background-image:
-    url("imagenes/backgrounds/hernan.png");
+  width: 350px;
+  height: 420px;
+  left: -120px;
 }
 
 .bg-pablo{
   background-image:
     url("imagenes/backgrounds/pablo.png");
+
+  width: 320px;
+  height: 420px;
+  left: -120px;
 }
+
+/* DERECHA */
+
+.bg-daniel{
+  background-image:
+    url("imagenes/backgrounds/daniel.png");
+
+  width: 480px;
+  height: 720px;
+   right: -120px;
+}
+.bg-hernan{
+  background-image:
+    url("imagenes/backgrounds/hernan.png");
+
+  width: 500px;
+  height: 700px;
+  right: -120px;
+}
+
 
 /* =========================
    RESPONSIVE
@@ -1022,4 +1026,5 @@ button:focus {
     opacity: 0.08;
   }
 
+}
 }
