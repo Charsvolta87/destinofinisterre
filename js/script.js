@@ -19,7 +19,7 @@ hiddenElements.forEach(el => {
   observer.observe(el);
 });
 
-const sections = document.querySelectorAll("section[id]");
+const sections = document.querySelectorAll("section[id], header[id]");
 const navLinks = document.querySelectorAll(".navbar a");
 
 function setActiveLink() {
