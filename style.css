@@ -37,7 +37,7 @@ body::before {
   z-index: -1;
 }
 
-.inicio {
+#inicio {
   min-height: 100vh;
 
   display: flex;
@@ -272,7 +272,7 @@ footer {
 
 @media(max-width: 768px) {
 
-  .inicio {
+  #inicio {
     padding-top: 100px;
   }
 
