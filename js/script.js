@@ -39,27 +39,8 @@ function setActiveLink() {
 
   });
 
-  navLinks.forEach(link => {
+  // detectar final de página
 
-  link.classList.remove("active");
-
-  if (link.getAttribute("href") === `#${currentSection}`) {
-    link.classList.add("active");
-  }
-
-});
-
-/* ACTIVAR GALERIA */
-
-if(currentSection === "galeria"){
-
-  document
-    .querySelector(".nav-galeria")
-    .classList.add("active");
-
-}
-
-  // 🔥 detectar final de página
   if (
     window.innerHeight + window.scrollY
     >= document.body.offsetHeight - 120
@@ -67,15 +48,31 @@ if(currentSection === "galeria"){
     currentSection = "redes";
   }
 
-  navLinks.forEach(link => {
+  // limpiar activos
 
+  navLinks.forEach(link => {
     link.classList.remove("active");
+  });
+
+  // activar links normales
+
+  navLinks.forEach(link => {
 
     if (link.getAttribute("href") === `#${currentSection}`) {
       link.classList.add("active");
     }
 
   });
+
+  // activar GALERIA cuando se vea la sección galeria-call
+
+  if(currentSection === "galeria"){
+
+    document
+      .querySelector(".nav-galeria")
+      .classList.add("active");
+
+  }
 
 }
 
