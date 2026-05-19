@@ -197,7 +197,7 @@ html {
   flex: 1;
 }
 .card {
-  background: rgba(20,20,20,.9);
+  background: rgba(20, 20, 20, 0);
   border: 1px solid rgba(255,255,255,.08);
   padding: 30px;
   border-radius: 12px;
