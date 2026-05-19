@@ -38,19 +38,31 @@ function setActiveLink() {
     }
 
   });
-  if(currentSection === "galeria-call"){
-
+  
   navLinks.forEach(link => {
 
-    if(link.classList.contains("nav-galeria")){
+  link.classList.remove("active");
 
-      link.classList.add("active");
+  /* secciones normales */
 
-    }
+  if(link.getAttribute("href") === `#${currentSection}`){
 
-  });
+    link.classList.add("active");
 
-}
+  }
+
+  /* galeria */
+
+  if(
+    currentSection === "galeria-call" &&
+    link.classList.contains("nav-galeria")
+  ){
+
+    link.classList.add("active");
+
+  }
+
+});
 
   // 🔥 detectar final de página
   if (
