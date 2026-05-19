@@ -827,3 +827,79 @@ button:focus {
 .nav-galeria:hover span::after {
   width: 100%;
 }
+
+
+
+.galeria-call {
+  text-align: center;
+}
+
+.galeria-call-content {
+  max-width: 900px;
+  margin: auto;
+
+  padding: 80px 40px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      rgba(10,10,10,.85),
+      rgba(0,0,0,.92)
+    );
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  backdrop-filter: blur(8px);
+}
+
+.galeria-call h2 {
+  margin-bottom: 20px;
+}
+
+.galeria-call p {
+  color: #b0b0b0;
+  margin-bottom: 35px;
+  font-size: 1.1rem;
+}
+
+.galeria-btn {
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+
+
+.pasado-card {
+  max-width: 260px;
+
+  padding: 18px;
+
+  margin: auto;
+
+  text-align: center;
+
+  opacity: .82;
+
+  transition: .3s;
+}
+
+.pasado-card:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+.pasado-card .flyer-img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.pasados-info h3 {
+  font-size: 1rem;
+  margin-top: 14px;
+}
+
+.pasados-info p {
+  font-size: .85rem;
+  color: #888;
+}
