@@ -31,19 +31,59 @@ eventos.forEach(evento => {
 
   section.innerHTML = `
 
-    <div class="evento-header">
+  <div class="evento-header">
+
+    <div class="evento-info">
       <h3>${evento.nombre}</h3>
       <p>${evento.fecha}</p>
     </div>
 
-    <div class="galeria-grid">
-      ${fotosHTML}
-      ${videosHTML}
-    </div>
+    <button class="toggle-btn">
+      VER
+    </button>
 
-  `;
+  </div>
+
+  <div class="galeria-grid collapsed">
+
+    ${fotosHTML}
+    ${videosHTML}
+
+  </div>
+
+`;
 
   container.appendChild(section);
+
+});
+
+/* =========================
+   TOGGLE GALERIA
+========================= */
+
+const toggleButtons = document.querySelectorAll(".toggle-btn");
+
+toggleButtons.forEach(btn => {
+
+  btn.addEventListener("click", () => {
+
+    const grid = btn
+      .closest(".evento-block")
+      .querySelector(".galeria-grid");
+
+    grid.classList.toggle("collapsed");
+
+    if(grid.classList.contains("collapsed")){
+
+      btn.textContent = "VER";
+
+    } else {
+
+      btn.textContent = "OCULTAR";
+
+    }
+
+  });
 
 });
 
