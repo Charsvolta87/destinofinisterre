@@ -5,6 +5,7 @@ const eventos = [
   nombre: "Makena",
   fecha: "24/01/2026",
   carpeta: "Makena_24_21_2026",
+  id:"makena_24_01_26",
 
   fotos: [
     "imagenes/Makena_24_21_2026/VGIV-1.jpg.jpeg",
@@ -65,7 +66,7 @@ const eventos = [
   nombre: "Club Tucumán",
   fecha: "30/04/2026",
   carpeta: "Club Tucumán 30 04 2026",
-
+  id:"club_tucuman_30_04_26",
   fotos: [
     
   ],
@@ -83,7 +84,7 @@ const eventos = [
   nombre: "Baco Berazategui",
   fecha: "02/05/2026",
   carpeta: "Baco 02/05/2026",
-
+  id:"baco_02_05_26",
   fotos: [
     
   ],
@@ -108,7 +109,7 @@ const eventos = [
   nombre: "La Camencha",
   fecha: "16/05/2026",
   carpeta: "La Camencha 16 05 2026",
-
+  id:"la_camencha_16_05_26",
   fotos: [
     "imagenes/La Camencha 16 05 2026/Destino_Finisterre_La_Camencha_Glew_01.jpg",
     "imagenes/La Camencha 16 05 2026/Destino_Finisterre_La_Camencha_Glew_02.jpg",
@@ -127,13 +128,12 @@ const eventos = [
     
   ]
 },
-
     //  BACO 23 05 2026
 {
   nombre: "Baco Berazategui",
   fecha: "23/05/2026",
   carpeta: "Baco 23 05 2026",
-
+  id:"baco_23_05_26",
   fotos: [
     "imagenes/Baco 23 05 2026/Baco_23_05_26_01.jpg",
     "imagenes/Baco 23 05 2026/Baco_23_05_26_02.jpg",
@@ -160,4 +160,5 @@ const eventos = [
     
   ]
 },
+
 ];
