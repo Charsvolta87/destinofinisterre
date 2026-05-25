@@ -128,4 +128,37 @@ const eventos = [
   ]
 },
 
+    //  BACO 23 05 2026
+{
+  nombre: "Baco Berazategui",
+  fecha: "23/05/2026",
+  carpeta: "Baco 23 05 2026",
+
+  fotos: [
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_01.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_02.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_03.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_04.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_05.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_06.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_07.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_08.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_09.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_10.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_11.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_12.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_13.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_14.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_15.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_16.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_17.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_18.jpg",
+    "imagenes/Baco 23 05 2026/Baco_23_05_26_19.jpg",
+        
+  ],
+
+  videos: [
+    
+  ]
+},
 ];
