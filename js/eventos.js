@@ -141,7 +141,6 @@ const eventos = [
     "imagenes/Baco 23 05 2026/Baco_23_05_26_04.jpg",
     "imagenes/Baco 23 05 2026/Baco_23_05_26_05.jpg",
     "imagenes/Baco 23 05 2026/Baco_23_05_26_06.jpg",
-    "imagenes/Baco 23 05 2026/Baco_23_05_26_07.jpg",
     "imagenes/Baco 23 05 2026/Baco_23_05_26_08.jpg",
     "imagenes/Baco 23 05 2026/Baco_23_05_26_09.jpg",
     "imagenes/Baco 23 05 2026/Baco_23_05_26_10.jpg",
