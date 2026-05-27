@@ -273,10 +273,6 @@ footer {
 
 @media(max-width: 768px) {
 
-  .scroll-btn{
-    display: none;
-  }
-
   #inicio {
     padding-top: 100px;
   }
