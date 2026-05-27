@@ -861,8 +861,8 @@ button:focus {
   pointer-events: none;
 }
 
-.galeria-grid::-webkit-scrollbar {
-  height: 8px;
+.galeria-grid::-webkit-scrollbar{
+  display: none;
 }
 
 .galeria-grid::-webkit-scrollbar-track {
@@ -879,7 +879,61 @@ button:focus {
   background: rgba(255,0,0,.7);
 }
 
+/* WRAPPER */
 
+.galeria-wrapper{
+  position: relative;
+}
+
+/* BOTONES */
+
+.scroll-btn{
+
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,255,255,.1);
+
+  background: rgba(0,0,0,.65);
+
+  color: white;
+
+  cursor: pointer;
+
+  z-index: 5;
+
+  transition: .3s;
+
+  backdrop-filter: blur(6px);
+}
+
+.scroll-btn:hover{
+
+  background: rgba(120,0,0,.75);
+
+  transform:
+    translateY(-50%)
+    scale(1.08);
+}
+
+/* IZQUIERDA */
+
+.scroll-btn.left{
+  left: -20px;
+}
+
+/* DERECHA */
+
+.scroll-btn.right{
+  right: -20px;
+}
 
 
 

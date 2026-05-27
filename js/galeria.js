@@ -62,7 +62,19 @@ evento.videos.forEach(video => {
 
   </div>
 
+  <div class="galeria-wrapper">
+
+  <button class="scroll-btn left">
+    &#10094;
+  </button>
+
   <div class="galeria-grid collapsed"></div>
+
+  <button class="scroll-btn right">
+    &#10095;
+  </button>
+
+</div>
 
 `;
 
@@ -386,5 +398,44 @@ button.textContent = "OCULTAR";
     });
 
   }, 200);
+
+});
+
+
+/* =========================
+   SCROLL HORIZONTAL
+========================= */
+
+document.addEventListener("click", e => {
+
+  // DERECHA
+
+  if(e.target.classList.contains("right")){
+
+    const grid = e.target
+      .parentElement
+      .querySelector(".galeria-grid");
+
+    grid.scrollBy({
+      left: 900,
+      behavior: "smooth"
+    });
+
+  }
+
+  // IZQUIERDA
+
+  if(e.target.classList.contains("left")){
+
+    const grid = e.target
+      .parentElement
+      .querySelector(".galeria-grid");
+
+    grid.scrollBy({
+      left: -900,
+      behavior: "smooth"
+    });
+
+  }
 
 });
