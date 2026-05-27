@@ -659,7 +659,7 @@ button:focus {
   gap: 18px;
 }
 
-.archivo-item{
+.archivo-item-link{
   display: flex;
   align-items: center;
   gap: 20px;
@@ -673,7 +673,7 @@ button:focus {
     border-color .3s ease;
 }
 
-.archivo-item:hover{
+.archivo-item-link:hover{
 
   transform: translateX(8px);
 
@@ -1068,8 +1068,3 @@ button:focus {
    LINK ARCHIVO
 ========================= */
 
-.archivo-item-link{
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
