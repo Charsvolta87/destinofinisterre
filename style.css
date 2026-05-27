@@ -708,6 +708,13 @@ button:focus {
   font-size: 30px;
 }
 
+.archivo-info h2{
+  color: #ff3a3a;
+
+  margin-bottom: 8px;
+
+  font-size: 20px;
+}
 .archivo-info p{
 
   color: #bdbdbd;
