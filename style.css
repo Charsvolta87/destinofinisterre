@@ -568,6 +568,7 @@ button:focus {
 
 .evento-block {
   margin-bottom: 100px;
+  overflow-x: auto
 }
 
 .evento-header {
