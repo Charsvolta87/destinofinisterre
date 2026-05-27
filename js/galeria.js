@@ -299,13 +299,84 @@ window.addEventListener("load", () => {
 
     // abrir SOLO el elegido
 
-    const grid = targetEvent.querySelector(".galeria-grid");
+const grid =
+  targetEvent.querySelector(".galeria-grid");
 
-    const button = targetEvent.querySelector(".toggle-btn");
+const button =
+  targetEvent.querySelector(".toggle-btn");
 
-    grid.classList.remove("collapsed");
+const currentId =
+  targetEvent.dataset.id;
 
-    button.textContent = "OCULTAR";
+const evento =
+  eventos.find(e => e.id === currentId);
+
+let contenidoHTML = "";
+
+/* =========================
+   FOTOS
+========================= */
+
+evento.fotos.forEach(foto => {
+
+  contenidoHTML += `
+
+    <img
+      src="${foto}"
+      alt="${evento.nombre}"
+      class="galeria-img modal-trigger"
+      loading="lazy"
+      decoding="async">
+
+  `;
+
+});
+
+/* =========================
+   VIDEOS
+========================= */
+
+evento.videos.forEach(video => {
+
+  let videoId = "";
+
+  if(video.includes("watch?v=")){
+
+    videoId =
+      video.split("watch?v=")[1];
+
+  } else if(video.includes("youtu.be/")){
+
+    videoId =
+      video.split("youtu.be/")[1];
+
+  }
+
+  videoId = videoId.split("&")[0];
+
+  contenidoHTML += `
+
+    <div class="youtube-video">
+
+      <iframe
+        src="https://www.youtube.com/embed/${videoId}"
+        title="${evento.nombre}"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+
+  `;
+
+});
+
+grid.innerHTML = contenidoHTML;
+
+grid.classList.remove("collapsed");
+
+button.textContent = "OCULTAR";
+
+
 
     // scroll suave
 
