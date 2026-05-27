@@ -866,7 +866,8 @@ button:focus {
 }
 
 .galeria-grid::-webkit-scrollbar{
-  display: none;
+  height: 8px;
+
 }
 
 .galeria-grid::-webkit-scrollbar-track {
