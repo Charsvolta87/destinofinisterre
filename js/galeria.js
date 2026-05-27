@@ -5,20 +5,7 @@ eventos.forEach(evento => {
   const section = document.createElement("div");
   section.classList.add("evento-block");
 
-  let fotosHTML = "";
 
-  evento.fotos.forEach(foto => {
-
-    fotosHTML += `
-      <img 
-        src="${foto}"
-        alt="${evento.nombre}"
-        class="galeria-img modal-trigger"
-        loading="lazy"
-        decoding="async">
-    `;
-
-  });
 
   let videosHTML = "";
 
@@ -71,12 +58,7 @@ evento.videos.forEach(video => {
 
   </div>
 
-  <div class="galeria-grid collapsed">
-
-    ${fotosHTML}
-    ${videosHTML}
-
-  </div>
+  <div class="galeria-grid collapsed"></div>
 
 `;
 
@@ -94,19 +76,88 @@ toggleButtons.forEach(btn => {
 
   btn.addEventListener("click", () => {
 
-    const grid = btn
-      .closest(".evento-block")
-      .querySelector(".galeria-grid");
+    const eventoBlock = btn.closest(".evento-block");
 
-    grid.classList.toggle("collapsed");
+    const grid = eventoBlock.querySelector(".galeria-grid");
+
+    const eventoNombre = eventoBlock
+      .querySelector("h3")
+      .textContent;
+
+    const evento = eventos.find(e => e.nombre === eventoNombre);
+
+    // ABRIR
 
     if(grid.classList.contains("collapsed")){
 
-      btn.textContent = "VER";
+      let contenidoHTML = "";
 
-    } else {
+      // FOTOS
+
+      evento.fotos.forEach(foto => {
+
+        contenidoHTML += `
+          <img
+            src="${foto}"
+            alt="${evento.nombre}"
+            class="galeria-img modal-trigger"
+            loading="lazy"
+            decoding="async">
+        `;
+
+      });
+
+      // VIDEOS
+
+      evento.videos.forEach(video => {
+
+        let videoId = "";
+
+        if(video.includes("watch?v=")){
+
+          videoId = video.split("watch?v=")[1];
+
+        } else if(video.includes("youtu.be/")){
+
+          videoId = video.split("youtu.be/")[1];
+
+        }
+
+        videoId = videoId.split("&")[0];
+
+        contenidoHTML += `
+
+          <div class="youtube-video">
+
+            <iframe
+              src="https://www.youtube.com/embed/${videoId}"
+              title="${evento.nombre}"
+              allowfullscreen>
+            </iframe>
+
+          </div>
+
+        `;
+
+      });
+
+      grid.innerHTML = contenidoHTML;
+
+      grid.classList.remove("collapsed");
 
       btn.textContent = "OCULTAR";
+
+    }
+
+    // CERRAR
+
+    else {
+
+      grid.classList.add("collapsed");
+
+      grid.innerHTML = "";
+
+      btn.textContent = "VER";
 
     }
 
