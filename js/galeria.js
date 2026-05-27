@@ -5,6 +5,8 @@ eventos.forEach(evento => {
   const section = document.createElement("div");
   section.classList.add("evento-block");
 
+  section.id = evento.id;
+
   section.dataset.id = evento.id;
 
 
@@ -234,5 +236,42 @@ modalImg.addEventListener("wheel", e => {
   scale = Math.min(Math.max(1, scale), 5);
 
   modalImg.style.transform = `scale(${scale})`;
+
+});
+
+/* =========================
+   ABRIR EVENTO DESDE HASH
+========================= */
+
+window.addEventListener("load", () => {
+
+  const hash = window.location.hash;
+
+  if(!hash) return;
+
+  const targetEvent = document.querySelector(hash);
+
+  if(!targetEvent) return;
+
+  // scroll suave
+
+  targetEvent.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+  // abrir galería automáticamente
+
+  const grid = targetEvent.querySelector(".galeria-grid");
+
+  const button = targetEvent.querySelector(".toggle-btn");
+
+  if(grid.classList.contains("collapsed")){
+
+    grid.classList.remove("collapsed");
+
+    button.textContent = "OCULTAR";
+
+  }
 
 });
