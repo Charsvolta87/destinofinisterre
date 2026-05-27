@@ -670,11 +670,9 @@ button:focus {
   transition:
     transform .3s ease,
     border-color .3s ease;
+    text-decoration: none;
 }
 
-.archivo-item-link a{
-  text-decoration: none;
-}
 
 .archivo-item-link:hover{
 
