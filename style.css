@@ -865,9 +865,9 @@ button:focus {
   pointer-events: none;
 }
 
-/*.galeria-grid::-webkit-scrollbar{
+.galeria-grid::-webkit-scrollbar{
   display: none;
-}*/
+}
 
 .galeria-grid::-webkit-scrollbar-track {
   background: rgba(255,255,255,.04);
