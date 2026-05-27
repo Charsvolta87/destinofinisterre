@@ -5,6 +5,8 @@ eventos.forEach(evento => {
   const section = document.createElement("div");
   section.classList.add("evento-block");
 
+  section.dataset.id = evento.id;
+
 
 
   let videosHTML = "";
@@ -80,11 +82,9 @@ toggleButtons.forEach(btn => {
 
     const grid = eventoBlock.querySelector(".galeria-grid");
 
-    const eventoNombre = eventoBlock
-      .querySelector("h3")
-      .textContent;
+    const eventoId = eventoBlock.dataset.id;
 
-    const evento = eventos.find(e => e.nombre === eventoNombre);
+    const evento = eventos.find(e => e.id === eventoId);
 
     // ABRIR
 
