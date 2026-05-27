@@ -81,7 +81,7 @@ const eventos = [
 },
     //  BACO
 {
-  nombre: "Baco Berazategui",
+  nombre: "Baco",
   fecha: "02/05/2026",
   carpeta: "Baco 02/05/2026",
   id:"baco_02_05_26",
@@ -130,7 +130,7 @@ const eventos = [
 },
     //  BACO 23 05 2026
 {
-  nombre: "Baco Berazategui",
+  nombre: "Baco",
   fecha: "23/05/2026",
   carpeta: "Baco 23 05 2026",
   id:"baco_23_05_26",
