@@ -888,30 +888,27 @@ button:focus {
 /* BOTONES */
 
 .scroll-btn{
-
   position: absolute;
-
   top: 50%;
   transform: translateY(-50%);
-
   width: 44px;
   height: 44px;
-
   border-radius: 50%;
-
   border: 1px solid rgba(255,255,255,.1);
-
   background: rgba(0,0,0,.65);
-
   color: white;
-
   cursor: pointer;
-
   z-index: 5;
-
   transition: .3s;
-
   backdrop-filter: blur(6px);
+  opacity: 0;
+pointer-events: none;
+transition: .3s;
+}
+
+.evento-block.open .galeria-scroll-btn{
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .scroll-btn:hover{
@@ -939,22 +936,29 @@ button:focus {
 
 
 .youtube-video {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
+
+  width: 240px;
+  height: 240px;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
 
   overflow: hidden;
 
-  border-radius: 14px;
+  border:
+    1px solid rgba(255,255,255,.08);
 
-  border: 1px solid rgba(255,255,255,.08);
+  background: #111;
 
-  background: #0b0b0b;
+  transition: .4s;
 }
 
-.youtube-video iframe {
+.youtube-video iframe{
+
   width: 100%;
   height: 100%;
+
   border: none;
 }
 

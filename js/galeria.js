@@ -110,13 +110,20 @@ toggleButtons.forEach(btn => {
     // cerrar todos
 
     document.querySelectorAll(".galeria-grid")
-      .forEach(grid => {
+  .forEach(grid => {
 
-        grid.classList.add("collapsed");
+    grid.classList.add("collapsed");
 
-        grid.innerHTML = "";
+    grid.innerHTML = "";
 
-      });
+  });
+
+document.querySelectorAll(".galeria-wrapper")
+  .forEach(wrapper => {
+
+    wrapper.classList.remove("active");
+
+  });
 
     document.querySelectorAll(".toggle-btn")
       .forEach(button => {
@@ -195,6 +202,10 @@ toggleButtons.forEach(btn => {
 
       btn.textContent = "OCULTAR";
 
+      currentBlock
+  .querySelector(".galeria-wrapper")
+  .classList.add("active");
+
     }
 
   });
@@ -272,10 +283,6 @@ modalImg.addEventListener("wheel", e => {
   modalImg.style.transform = `scale(${scale})`;
 
 });
-
-/* =========================
-   ABRIR EVENTO DESDE HASH
-========================= */
 
 /* =========================
    ABRIR EVENTO DESDE HASH
@@ -387,6 +394,10 @@ grid.innerHTML = contenidoHTML;
 grid.classList.remove("collapsed");
 
 button.textContent = "OCULTAR";
+
+targetEvent
+  .querySelector(".galeria-wrapper")
+  .classList.add("active");
 
 
 
