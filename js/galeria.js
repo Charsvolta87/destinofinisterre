@@ -10,9 +10,12 @@ eventos.forEach(evento => {
   evento.fotos.forEach(foto => {
 
     fotosHTML += `
-      <img src="${foto}"
-     alt="${evento.nombre}"
-     class="galeria-img modal-trigger">
+      <img 
+        src="${foto}"
+        alt="${evento.nombre}"
+        class="galeria-img modal-trigger"
+        loading="lazy"
+        decoding="async">
     `;
 
   });
