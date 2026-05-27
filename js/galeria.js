@@ -80,36 +80,67 @@ toggleButtons.forEach(btn => {
 
   btn.addEventListener("click", () => {
 
-    const eventoBlock = btn.closest(".evento-block");
+    const currentBlock =
+      btn.closest(".evento-block");
 
-    const grid = eventoBlock.querySelector(".galeria-grid");
+    const currentGrid =
+      currentBlock.querySelector(".galeria-grid");
 
-    const eventoId = eventoBlock.dataset.id;
+    const currentId =
+      currentBlock.dataset.id;
 
-    const evento = eventos.find(e => e.id === eventoId);
+    const evento =
+      eventos.find(e => e.id === currentId);
 
-    // ABRIR
+    const isCollapsed =
+      currentGrid.classList.contains("collapsed");
 
-    if(grid.classList.contains("collapsed")){
+    // cerrar todos
+
+    document.querySelectorAll(".galeria-grid")
+      .forEach(grid => {
+
+        grid.classList.add("collapsed");
+
+        grid.innerHTML = "";
+
+      });
+
+    document.querySelectorAll(".toggle-btn")
+      .forEach(button => {
+
+        button.textContent = "VER";
+
+      });
+
+    // abrir SOLO el actual
+
+    if(isCollapsed){
 
       let contenidoHTML = "";
 
-      // FOTOS
+      /* =========================
+         FOTOS
+      ========================= */
 
       evento.fotos.forEach(foto => {
 
         contenidoHTML += `
+
           <img
             src="${foto}"
             alt="${evento.nombre}"
             class="galeria-img modal-trigger"
             loading="lazy"
             decoding="async">
+
         `;
 
       });
 
-      // VIDEOS
+      /* =========================
+         VIDEOS
+      ========================= */
 
       evento.videos.forEach(video => {
 
@@ -117,11 +148,13 @@ toggleButtons.forEach(btn => {
 
         if(video.includes("watch?v=")){
 
-          videoId = video.split("watch?v=")[1];
+          videoId =
+            video.split("watch?v=")[1];
 
         } else if(video.includes("youtu.be/")){
 
-          videoId = video.split("youtu.be/")[1];
+          videoId =
+            video.split("youtu.be/")[1];
 
         }
 
@@ -143,23 +176,12 @@ toggleButtons.forEach(btn => {
 
       });
 
-      grid.innerHTML = contenidoHTML;
+      currentGrid.innerHTML =
+        contenidoHTML;
 
-      grid.classList.remove("collapsed");
+      currentGrid.classList.remove("collapsed");
 
       btn.textContent = "OCULTAR";
-
-    }
-
-    // CERRAR
-
-    else {
-
-      grid.classList.add("collapsed");
-
-      grid.innerHTML = "";
-
-      btn.textContent = "VER";
 
     }
 
@@ -243,35 +265,55 @@ modalImg.addEventListener("wheel", e => {
    ABRIR EVENTO DESDE HASH
 ========================= */
 
+/* =========================
+   ABRIR EVENTO DESDE HASH
+========================= */
+
 window.addEventListener("load", () => {
 
-  const hash = window.location.hash;
+  setTimeout(() => {
 
-  if(!hash) return;
+    const hash = window.location.hash;
 
-  const targetEvent = document.querySelector(hash);
+    if(!hash) return;
 
-  if(!targetEvent) return;
+    const targetEvent = document.querySelector(hash);
 
-  // scroll suave
+    if(!targetEvent) return;
 
-  targetEvent.scrollIntoView({
-    behavior: "smooth",
-    block: "start"
-  });
+    // cerrar TODOS
 
-  // abrir galería automáticamente
+    document.querySelectorAll(".galeria-grid")
+      .forEach(grid => {
 
-  const grid = targetEvent.querySelector(".galeria-grid");
+        grid.classList.add("collapsed");
 
-  const button = targetEvent.querySelector(".toggle-btn");
+      });
 
-  if(grid.classList.contains("collapsed")){
+    document.querySelectorAll(".toggle-btn")
+      .forEach(btn => {
+
+        btn.textContent = "VER";
+
+      });
+
+    // abrir SOLO el elegido
+
+    const grid = targetEvent.querySelector(".galeria-grid");
+
+    const button = targetEvent.querySelector(".toggle-btn");
 
     grid.classList.remove("collapsed");
 
     button.textContent = "OCULTAR";
 
-  }
+    // scroll suave
+
+    targetEvent.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+  }, 200);
 
 });

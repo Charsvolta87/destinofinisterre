@@ -1063,3 +1063,13 @@ button:focus {
   }
 
 }
+
+/* =========================
+   LINK ARCHIVO
+========================= */
+
+.archivo-item-link{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
